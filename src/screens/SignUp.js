@@ -3,12 +3,12 @@ import { View,Text } from 'react-native';
 
 // import { Container } from './styles';
 
-const Login = () => {
+const SignUp = () => {
   return (
       <View>
-          <Text>Tela de Login</Text>
+          <Text>Tela de Registro</Text>
       </View>
     );
 }
 
-export default Login; 
+export default SignUp; 

@@ -1,24 +1,21 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,Text
-} from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
-const Home = () =>  {
+import Settings from '../screens/Settings';
+import Home     from '../screens/Home';
+
+const Tab = createBottomTabNavigator();
+
+const HomeStack = () =>  {
   return (
-    <View style={styles.screen}>
-      <Text>Página Home</Text>
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Settings" component={Settings} />
+      </Tab.Navigator>
+    </NavigationContainer> 
   );
 }
+export default HomeStack;
 
-const styles = StyleSheet.create({
-  screen:{ 
-     flex:1,
-     alignItems:"center",
-     justifyContent: "center",
-     backgroundColor:"#FBB000"
-  }
-});
-
-export default Home;

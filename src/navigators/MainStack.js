@@ -1,12 +1,18 @@
-import {createAppContainer } from 'react-navigation';
-import {createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator} from 'react-navigation-stack';
 
-import Preload from '../screen/Preload';
-import Login from '../screen/Login';
-//import HomeStack from './HomeStack';
+import Preload from '../screens/Preload';
+import SignIn from '../screens/SignIn';
+import HomeStack from '../navigators/HomeStack';
 
 export default createAppContainer(createStackNavigator({
   Preload,
-  Login
-  //HomeStack
+  SignIn,
+  HomeStack
+},
+{
+  initialRouteName:'Preload',
+  defaultNavigationOptions:{
+      headerShown:false
+  }
 }));
